@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<style>
+body{
+font:menu;font-size:1.125em;
+margin: 0;
+}
+.EasyMDEContainer {
+	height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="easymde.min.css">
+<script src="easymde.min.js"></script>
+<textarea></textarea>
+<script>
+const easyMDE = new EasyMDE({
+	autosave: {
+		enabled: true,
+		delay: 3000,
+		uniqueId: 'notetab',
+		timeFormat: {
+			locale: 'sv-SE',
+			format: {
+				year: 'numeric',
+				month: '2-digit',
+				day: '2-digit',
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit',
+				hour12: false,
+			},
+		},
+	},
+	minHeight: '85vh',
+	sideBySideFullscreen: false,
+	uploadImage: true,
+	imageUploadEndpoint: '/cgi-bin/upload',
+});
+easyMDE.toggleSideBySide();
+</script>
