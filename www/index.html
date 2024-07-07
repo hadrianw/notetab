@@ -9,6 +9,26 @@ margin: 0;
 .EasyMDEContainer {
 	height: 100vh;
 }
+@keyframes pulseA {
+	100% {
+		background: none;
+	}
+}
+@keyframes pulseB {
+	100% {
+		background: none;
+	}
+}
+#autosaved {
+	animation: pulseA 1s forwards;
+	background: green;
+}
+#autosaved.toggle {
+	animation: pulseB 1s forwards;
+}
+#autosaved.failed {
+	background: red;
+}
 </style>
 <link rel="stylesheet" href="easymde.min.css">
 <script src="easymde.min.js"></script>
