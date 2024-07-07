@@ -83,7 +83,6 @@ main(int argc, char *argv[])
 
 	do {
 		if(match(buf, &idx, len, CONTENT_DISPOSITION_KEY)) {
-			fprintf(stderr, "XX1%.*sXXX\n", 100, &buf[idx]);
 			if(!match(buf, &idx, len, "form-data")) {
 				fprintf(stderr, "Bad " CONTENT_DISPOSITION_KEY " (expected 'form-data'): %.*s", (int)MIN(len-idx, boundary_len), &buf[idx]);
 				goto err_500;
