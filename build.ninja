@@ -1,0 +1,10 @@
+rule cc
+  command = musl-gcc -static -std=c99 -pedantic -Wall -Wextra -O2 $in -o $out
+
+build www/cgi-bin/upload: cc upload.c
+build www/cgi-bin/update: cc update.c
+
+rule npmci
+  command = cd $in && npm ci && cp dist/easymde.min.* ../www/
+
+build www/easymde.min.js: npmci easy-markdown-editor
