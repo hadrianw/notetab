@@ -5,6 +5,6 @@ build www/cgi-bin/upload: cc upload.c
 build www/cgi-bin/update: cc update.c
 
 rule npmci
-  command = cd $in && npm ci && cp dist/easymde.min.* ../www/
+  command = cd easy-markdown-editor && npm ci && cp dist/easymde.min.* ../www/
 
-build www/easymde.min.js: npmci easy-markdown-editor
+build www/easymde.min.js: npmci easy-markdown-editor/src/js/easymde.js
