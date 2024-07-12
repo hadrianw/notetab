@@ -10,11 +10,17 @@ margin: 0;
 	height: 100vh;
 }
 @keyframes pulseA {
+	0% {
+		color: black;
+	}
 	100% {
 		background: none;
 	}
 }
 @keyframes pulseB {
+	0% {
+		color: black;
+	}
 	100% {
 		background: none;
 	}
@@ -24,7 +30,7 @@ margin: 0;
 	background: green;
 }
 #autosaved.toggle {
-	animation: pulseB 1s forwards;
+	animation-name: pulseB;
 }
 #autosaved.failed {
 	background: red;
