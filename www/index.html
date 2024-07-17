@@ -34,6 +34,10 @@ margin: 0;
 }
 #autosaved.failed {
 	background: red;
+	color: black;
+}
+#autosaved.pending::after {
+	content: ' ⏲️';
 }
 </style>
 <link rel="stylesheet" href="easymde.min.css">
@@ -63,4 +67,5 @@ const easyMDE = new EasyMDE({
 	imageUploadEndpoint: '/cgi-bin/upload',
 });
 easyMDE.toggleSideBySide();
+easyMDE.toggleFullscreen();
 </script>
